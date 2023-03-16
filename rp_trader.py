@@ -106,40 +106,43 @@ class AutoTrader(BaseAutoTrader):
                 return
         self.rollingPrices.append(self.currentRatio)
         
+    
+        
+        
+        self.currentRatio = self.currentETF / self.currentFutures
+        #self.currentRatio = self.currentFutures / self.currentETF
+        
         if instrument == Instrument.FUTURE:
             self.best_bids.append(bid_prices[0])
             self.best_asks.append(ask_prices[0])
-            
-            self.currentRatio = self.currentETF / self.currentFutures
-            #self.currentRatio = self.currentFutures / self.currentETF
-        
-            
             if self.tick > 5:
+                pt_flu = abs(self.rollingPrices[-2] - self.rollingPrices[-3])/self.rollingPrices[-2]
                 self.best_bids.pop(0)
                 self.best_asks.pop(0)
                 bid_quote = np.sum(bid_volumes)
                 ask_quote = np.sum(ask_volumes)
+                tick_size = 100
                 if (bid_quote or ask_quote) == 0:
                     return
                 # Ask Order Price
                 if(((bid_quote - ask_quote) / (bid_quote + ask_quote)) > 0.5):
-                    new_ask_price = self.best_asks[-1] + (abs(self.best_asks[0] - self.best_asks[-2]) + 2) * TICK_SIZE_IN_CENTS
+                    new_ask_price = self.best_asks[-1] + (abs(self.best_asks[-1] - self.best_asks[-2]) + 2) * tick_size
 
                 elif(((ask_quote - bid_quote) / (bid_quote + ask_quote))> 0.5):
-                    new_ask_price = self.best_asks[0] + (abs(self.best_asks[0] - self.best_asks[-2])) * TICK_SIZE_IN_CENTS
+                    new_ask_price = self.best_asks[-1] + (abs(self.best_asks[-1] - self.best_asks[-2])) * tick_size
 
                 else:
-                    new_ask_price = self.best_asks[0] + (abs(self.best_asks[0] - self.best_asks[-2]) + 1) * TICK_SIZE_IN_CENTS
+                    new_ask_price = self.best_asks[-1] + (abs(self.best_asks[-1] - self.best_asks[-2]) + 1) * tick_size
 
                 # Bid Order Price
                 if(((bid_quote - ask_quote) / (bid_quote + ask_quote)) > 0.5):
-                    new_bid_price = self.best_bids[-1] - (abs(self.best_bids[-1] - self.best_bids[-2])) * TICK_SIZE_IN_CENTS
+                    new_bid_price = self.best_bids[-1] - (abs(self.best_bids[-1] - self.best_bids[-2])) * tick_size
 
                 elif(((ask_quote - bid_quote) / (bid_quote + ask_quote))> 0.5):
-                    new_bid_price = self.best_bids[-1] - (abs(self.best_bids[-1] - self.best_bids[-2]) + 2) * TICK_SIZE_IN_CENTS
+                    new_bid_price = self.best_bids[-1] - (abs(self.best_bids[-1] - self.best_bids[-2]) + 2) * tick_size
 
                 else:
-                    new_bid_price = self.best_bids[-1] - (abs(self.best_bids[-1] - self.best_bids[-2]) + 1) * TICK_SIZE_IN_CENTS
+                    new_bid_price = self.best_bids[-1] - (abs(self.best_bids[-1] - self.best_bids[-2]) + 1) * tick_size
                 
                 if self.tick >= self.window:
                     self.movingAverage = self.calculate_rolling_average_50()
@@ -174,13 +177,13 @@ class AutoTrader(BaseAutoTrader):
                         if self.ask_id == 0 and new_ask_price != 0 and self.position - LOT_SIZE> -POSITION_LIMIT:
                             self.ask_id = next(self.order_ids)
                             self.ask_price = new_ask_price
-                            self.send_insert_order(self.ask_id, Side.SELL, new_ask_price, LOT_SIZE, Lifespan.F)
+                            self.send_insert_order(self.ask_id, Side.SELL, new_ask_price, LOT_SIZE, Lifespan.LIMIT_ORDER)
                             self.asks.add(self.ask_id)
                     elif Z < Zl and self.stoch_rsi < SRl:  # buy in pos
                         if self.bid_id == 0 and new_bid_price != 0 and self.position + LOT_SIZE < POSITION_LIMIT:
                             self.bid_id = next(self.order_ids)
                             self.bid_price = new_bid_price
-                            self.send_insert_order(self.bid_id, Side.BUY, new_bid_price, LOT_SIZE, Lifespan.F)
+                            self.send_insert_order(self.bid_id, Side.BUY, new_bid_price, LOT_SIZE, Lifespan.LIMIT_ORDER)
                             self.bids.add(self.bid_id)
                     else:
                         self.rsi_window = 8

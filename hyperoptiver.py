@@ -1,4 +1,6 @@
 
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas as pd
 from hyperopt import fmin, tpe, hp
 import numpy as np
@@ -23,6 +25,8 @@ stoch_rsi = 0
 rollingPrices = []
 high_bollinger_band = 1
 low_bollinger_band = 1
+price_vol_side = {}
+lot_size = 10
 
 def calculate_rolling_average_50(window):
     global rollingPrices
@@ -163,19 +167,19 @@ def trade(this_ratio, parm):
             
             if conditions["ZSRSI_SELL"]:# sell in pos
                 sell_signals.append(cur_ratio)
-                #calc_profit(prev_sig)
-                if prev_sig == 1:
-                    calc_profit(prev_sig)
-                elif prev_sig == None:
-                    calc_profit(prev_sig)
+                calc_profit(prev_sig)
+                # if prev_sig == 1:
+                #     calc_profit(prev_sig)
+                # elif prev_sig == None:
+                #     calc_profit(prev_sig)
                 prev_sig = 0
             elif conditions["ZSRSI_BUY"]:# buy in pos
                 buy_signals.append(cur_ratio)
-                #calc_profit(prev_sig)
-                if prev_sig == 0:
-                    calc_profit(prev_sig)
-                elif prev_sig == None:
-                    calc_profit(prev_sig)
+                calc_profit(prev_sig)
+                # if prev_sig == 0:
+                #     calc_profit(prev_sig)
+                # elif prev_sig == None:
+                #     calc_profit(prev_sig)
                 prev_sig = 1
             else:
                 movingAvSmall = calculate_rolling_average_50(int(parm['smallWindow']))
@@ -185,19 +189,19 @@ def trade(this_ratio, parm):
                 
                 if conditions["ZSRSI_SELL"]:# sell in pos
                     sell_signals.append(cur_ratio)
-                    #calc_profit(prev_sig)
-                    if prev_sig == 1:
-                        calc_profit(prev_sig)
-                    elif prev_sig == None:
-                        calc_profit(prev_sig)
+                    calc_profit(prev_sig)
+                    # if prev_sig == 1:
+                    #     calc_profit(prev_sig)
+                    # elif prev_sig == None:
+                    #     calc_profit(prev_sig)
                     prev_sig = 0
                 elif conditions["ZSRSI_BUY"]:# buy in pos
                     buy_signals.append(cur_ratio)
-                    #calc_profit(prev_sig)
-                    if prev_sig == 0:
-                        calc_profit(prev_sig)
-                    elif prev_sig == None:
-                        calc_profit(prev_sig)
+                    calc_profit(prev_sig)
+                    # if prev_sig == 0:
+                    #     calc_profit(prev_sig)
+                    # elif prev_sig == None:
+                    #     calc_profit(prev_sig)
                     prev_sig = 1
                 
         elif parm["name"] == "Bollis":
@@ -251,7 +255,7 @@ def optimize_parameters():
     "smallWindow" : windowSmall
     },
      {
-    "name" : "Bolli",
+    "name" : "Bollis",
     "Window": window,
     "BWindow": hp.quniform("b_Window", 10,50, q = 1),
     "band_width": hp.quniform("b_width", 1,2.5, q = 0.1),
@@ -263,25 +267,27 @@ def optimize_parameters():
     best = fmin(fn=run,
                 space=param_space,
                 algo=tpe.suggest,
-                max_evals=500)
+                max_evals=1000)
                 
     print ("Best parameters found: ", best)
     return best
+
 def reset_globals():
-    globals_dict = globals()
-    for key, value in globals_dict.items():
-        if key == 'WINDOW_SIZE':
-            continue
-        elif key == 'high_bollinger_band':
-            globals()[key] = 1
-        elif key == 'low_bollinger_band':
-            globals()[key] = 1
-        elif key == 'prev_sig':
-            globals()[key] = -1 
-        elif type(value) == int: 
-            globals()[key] = int(0) 
-        elif type(value) == list: 
-            globals()[key] = list([])
+    globals_dict = globals().copy()
+    for key in globals_dict:
+        del globals()[key]
+        # if key == 'WINDOW_SIZE':
+        #     continue
+        # elif key == 'high_bollinger_band':
+        #     globals()[key] = 1
+        # elif key == 'low_bollinger_band':
+        #     globals()[key] = 1
+        # elif key == 'prev_sig':
+        #     globals()[key] = -1 
+        # elif type(value) == int: 
+        #     globals()[key] = int(0) 
+        # elif type(value) == list: 
+        #     globals()[key] = list([])
         
     
 def run(parm):
@@ -308,5 +314,41 @@ def run(parm):
     
 if __name__ == '__main__':
     
+    
+    datas = ["data/market_data1.csv", "data/market_data2.csv", "data/market_data3.csv", "data/market_data4.csv", "data/market_data6.csv"]
+    
+    #     #read in csv data
+    # df = pd.read_csv(datas[0])
+
+    # # create a new column to round time 
+    # df['rounded_time'] = df.Time.round()
+
+    # # filter dataframe to only keep relevant orders
+    # df_relevant = df.loc[df['Operation']=='Insert', ['rounded_time', 'Instrument', 'Side','Volume','Price']]
+
+    # # create a dictionary to store dataframes
+    # tick_dict = {}
+
+    # # iterate through rounded_time values
+    # for t in df['rounded_time'].unique():
+    #     # create temporary dataframe to store data
+    #     df_temp = pd.DataFrame()
+    #     # filter dataframe to only keep orders at given time t
+    #     df_temp = df_relevant.loc[df['rounded_time']==t]
+
+    #     df_0 = df_temp.loc[df_temp['Instrument'] == 0]
+    #     # split dataframe into 'A' and 'B' orders
+    #     df_A0 = df_0.loc[df_temp['Side']=='A']
+    #     df_B0 = df_0.loc[df_temp['Side']=='B']
+        
+    #     # store dataframes in dictionary 
+    #     tick_dict[t] = [df_0, df_B]
+
+    # # print dictionary
+    # price_vol_side = tick_dict
+    
+    # ratios = 
+    
+    # print(tick_dict)
     optimize_parameters()
     

@@ -4556,3 +4556,395 @@ ConnectionResetError: [WinError 10054] An existing connection was forcibly close
 2023-03-16 02:03:02,939 [INFO   ] [EXECUTION] fd=600 'Chrimata6' is ready!
 2023-03-16 02:03:04,073 [INFO   ] [CONNECTION] fd=604 connection established: peer=127.0.0.1:65263
 2023-03-16 02:03:07,919 [INFO   ] [CONTROLLER] market open
+2023-03-16 02:05:40,776 [INFO   ] [APP] exchange started with arguments={rtg.py, run, rp_trader.py}
+2023-03-16 02:05:40,776 [INFO   ] [APP] configuration={"Engine":{"MarketDataFile":"data/market_data2.csv","MarketEventInterval":0.05,"MarketOpenDelay":5.0,"MatchEventsFile":"match_events.csv","ScoreBoardFile":"score_board.csv","Speed":2.0,"TickInterval":0.25},"Execution":{"Host":"127.0.0.1","Port":12345},"Fees":{"Maker":-0.0001,"Taker":0.0002},"Hud":{"Host":"127.0.0.1","Port":12347},"Information":{"Type":"mmap","Name":"info.dat"},"Instrument":{"EtfClamp":0.002,"TickSize":1.0},"Limits":{"ActiveOrderCountLimit":10,"ActiveVolumeLimit":200,"MessageFrequencyInterval":1.0,"MessageFrequencyLimit":50,"PositionLimit":100},"Traders":{"Chrimata":"secret","Chrimata1.5":"secret","TraderTwo":"secret","Chrimata2":"secret","Chrimata2.5":"secret","Chrimata3":"secret","Chrimata4":"secret","Chrimata4.5":"secret","Chrimata5":"secret","Chrimata6":"secret"}}
+2023-03-16 02:05:40,778 [INFO   ] [CONTROLLER] starting the match
+2023-03-16 02:05:40,778 [INFO   ] [EXECUTION] starting execution server: host=127.0.0.1 port=12345
+2023-03-16 02:05:40,779 [INFO   ] [INFORMATION] starting information publisher: type=mmap name=info.dat
+2023-03-16 02:05:40,786 [INFO   ] [HEADS_UP] starting heads-up display server: host=127.0.0.1 port=12347
+2023-03-16 02:05:40,786 [INFO   ] [INFORMATION] information channel established
+2023-03-16 02:05:40,803 [INFO   ] [CONNECTION] fd=1012 connection established: peer=127.0.0.1:65354
+2023-03-16 02:05:40,804 [INFO   ] [EXECUTION] fd=1012 'Chrimata6' is ready!
+2023-03-16 02:05:41,895 [INFO   ] [CONNECTION] fd=1016 connection established: peer=127.0.0.1:65355
+2023-03-16 02:05:45,813 [INFO   ] [CONTROLLER] market open
+2023-03-16 02:13:15,056 [INFO   ] [MARKET_EVENTS] reader thread complete after processing 614706 market events
+2023-03-16 02:13:15,907 [INFO   ] [TIMER] shutting down the match: time=900.186000 reason='match complete'
+2023-03-16 02:13:15,908 [INFO   ] [COMPETITOR] 'Chrimata6' closing execution channel at time=900.186000
+2023-03-16 02:13:15,908 [INFO   ] [CONNECTION] fd=1012 connection lost
+2023-03-16 02:13:15,908 [INFO   ] [SCORE_BOARD] writer thread complete after processing 3602 score records
+2023-03-16 02:13:15,910 [INFO   ] [MATCH_EVENTS] writer thread complete after processing 618008 match events
+2023-03-16 02:13:15,910 [INFO   ] [APP] closing event loop
+2023-03-16 14:18:40,136 [INFO   ] [APP] exchange started with arguments={rtg.py, run, rp_trader.py}
+2023-03-16 14:18:40,136 [INFO   ] [APP] configuration={"Engine":{"MarketDataFile":"data/market_data2.csv","MarketEventInterval":0.05,"MarketOpenDelay":5.0,"MatchEventsFile":"match_events.csv","ScoreBoardFile":"score_board.csv","Speed":2.0,"TickInterval":0.25},"Execution":{"Host":"127.0.0.1","Port":12345},"Fees":{"Maker":-0.0001,"Taker":0.0002},"Hud":{"Host":"127.0.0.1","Port":12347},"Information":{"Type":"mmap","Name":"info.dat"},"Instrument":{"EtfClamp":0.002,"TickSize":1.0},"Limits":{"ActiveOrderCountLimit":10,"ActiveVolumeLimit":200,"MessageFrequencyInterval":1.0,"MessageFrequencyLimit":50,"PositionLimit":100},"Traders":{"Chrimata":"secret","Chrimata1.5":"secret","TraderTwo":"secret","Chrimata2":"secret","Chrimata2.5":"secret","Chrimata3":"secret","Chrimata4":"secret","Chrimata4.5":"secret","Chrimata5":"secret","Chrimata6":"secret"}}
+2023-03-16 14:18:40,137 [INFO   ] [CONTROLLER] starting the match
+2023-03-16 14:18:40,137 [INFO   ] [EXECUTION] starting execution server: host=127.0.0.1 port=12345
+2023-03-16 14:18:40,137 [INFO   ] [INFORMATION] starting information publisher: type=mmap name=info.dat
+2023-03-16 14:18:40,141 [INFO   ] [HEADS_UP] starting heads-up display server: host=127.0.0.1 port=12347
+2023-03-16 14:18:40,142 [INFO   ] [INFORMATION] information channel established
+2023-03-16 14:18:40,173 [INFO   ] [CONNECTION] fd=600 connection established: peer=127.0.0.1:62647
+2023-03-16 14:18:40,173 [INFO   ] [EXECUTION] fd=600 'Chrimata6' is ready!
+2023-03-16 14:18:41,437 [INFO   ] [CONNECTION] fd=364 connection established: peer=127.0.0.1:62649
+2023-03-16 14:18:45,169 [INFO   ] [CONTROLLER] market open
+2023-03-16 14:26:11,449 [INFO   ] [APP] exchange started with arguments={rtg.py, run, rp_trader.py}
+2023-03-16 14:26:11,449 [INFO   ] [APP] configuration={"Engine":{"MarketDataFile":"data/market_data2.csv","MarketEventInterval":0.05,"MarketOpenDelay":5.0,"MatchEventsFile":"match_events.csv","ScoreBoardFile":"score_board.csv","Speed":2.0,"TickInterval":0.25},"Execution":{"Host":"127.0.0.1","Port":12345},"Fees":{"Maker":-0.0001,"Taker":0.0002},"Hud":{"Host":"127.0.0.1","Port":12347},"Information":{"Type":"mmap","Name":"info.dat"},"Instrument":{"EtfClamp":0.002,"TickSize":1.0},"Limits":{"ActiveOrderCountLimit":10,"ActiveVolumeLimit":200,"MessageFrequencyInterval":1.0,"MessageFrequencyLimit":50,"PositionLimit":100},"Traders":{"Chrimata":"secret","Chrimata1.5":"secret","TraderTwo":"secret","Chrimata2":"secret","Chrimata2.5":"secret","Chrimata3":"secret","Chrimata4":"secret","Chrimata4.5":"secret","Chrimata5":"secret","Chrimata6":"secret"}}
+2023-03-16 14:26:11,450 [INFO   ] [CONTROLLER] starting the match
+2023-03-16 14:26:11,450 [INFO   ] [EXECUTION] starting execution server: host=127.0.0.1 port=12345
+2023-03-16 14:26:11,450 [INFO   ] [INFORMATION] starting information publisher: type=mmap name=info.dat
+2023-03-16 14:26:11,456 [INFO   ] [HEADS_UP] starting heads-up display server: host=127.0.0.1 port=12347
+2023-03-16 14:26:11,456 [INFO   ] [INFORMATION] information channel established
+2023-03-16 14:26:11,521 [INFO   ] [CONNECTION] fd=1004 connection established: peer=127.0.0.1:62911
+2023-03-16 14:26:11,521 [INFO   ] [EXECUTION] fd=1004 'Chrimata6' is ready!
+2023-03-16 14:26:12,660 [INFO   ] [CONNECTION] fd=992 connection established: peer=127.0.0.1:62912
+2023-03-16 14:26:16,473 [INFO   ] [CONTROLLER] market open
+2023-03-16 14:26:17,017 [INFO   ] [CONNECTION] fd=1004 connection lost
+2023-03-16 14:26:17,018 [WARNING] [EXECUTION] fd=1004 lost connection to auto-trader:
+2023-03-16 14:27:06,766 [INFO   ] [APP] exchange started with arguments={rtg.py, run, rp_trader.py}
+2023-03-16 14:27:06,766 [INFO   ] [APP] configuration={"Engine":{"MarketDataFile":"data/market_data2.csv","MarketEventInterval":0.05,"MarketOpenDelay":5.0,"MatchEventsFile":"match_events.csv","ScoreBoardFile":"score_board.csv","Speed":2.0,"TickInterval":0.25},"Execution":{"Host":"127.0.0.1","Port":12345},"Fees":{"Maker":-0.0001,"Taker":0.0002},"Hud":{"Host":"127.0.0.1","Port":12347},"Information":{"Type":"mmap","Name":"info.dat"},"Instrument":{"EtfClamp":0.002,"TickSize":1.0},"Limits":{"ActiveOrderCountLimit":10,"ActiveVolumeLimit":200,"MessageFrequencyInterval":1.0,"MessageFrequencyLimit":50,"PositionLimit":100},"Traders":{"Chrimata":"secret","Chrimata1.5":"secret","TraderTwo":"secret","Chrimata2":"secret","Chrimata2.5":"secret","Chrimata3":"secret","Chrimata4":"secret","Chrimata4.5":"secret","Chrimata5":"secret","Chrimata6":"secret"}}
+2023-03-16 14:27:06,767 [INFO   ] [CONTROLLER] starting the match
+2023-03-16 14:27:06,767 [INFO   ] [EXECUTION] starting execution server: host=127.0.0.1 port=12345
+2023-03-16 14:27:06,767 [INFO   ] [INFORMATION] starting information publisher: type=mmap name=info.dat
+2023-03-16 14:27:06,772 [INFO   ] [HEADS_UP] starting heads-up display server: host=127.0.0.1 port=12347
+2023-03-16 14:27:06,773 [INFO   ] [INFORMATION] information channel established
+2023-03-16 14:27:06,796 [INFO   ] [CONNECTION] fd=884 connection established: peer=127.0.0.1:62963
+2023-03-16 14:27:06,796 [INFO   ] [EXECUTION] fd=884 'Chrimata6' is ready!
+2023-03-16 14:27:07,924 [INFO   ] [CONNECTION] fd=996 connection established: peer=127.0.0.1:62965
+2023-03-16 14:27:11,793 [INFO   ] [CONTROLLER] market open
+2023-03-16 14:29:36,007 [INFO   ] [APP] exchange started with arguments={rtg.py, run, rp_trader.py}
+2023-03-16 14:29:36,007 [INFO   ] [APP] configuration={"Engine":{"MarketDataFile":"data/market_data2.csv","MarketEventInterval":0.05,"MarketOpenDelay":5.0,"MatchEventsFile":"match_events.csv","ScoreBoardFile":"score_board.csv","Speed":2.0,"TickInterval":0.25},"Execution":{"Host":"127.0.0.1","Port":12345},"Fees":{"Maker":-0.0001,"Taker":0.0002},"Hud":{"Host":"127.0.0.1","Port":12347},"Information":{"Type":"mmap","Name":"info.dat"},"Instrument":{"EtfClamp":0.002,"TickSize":1.0},"Limits":{"ActiveOrderCountLimit":10,"ActiveVolumeLimit":200,"MessageFrequencyInterval":1.0,"MessageFrequencyLimit":50,"PositionLimit":100},"Traders":{"Chrimata":"secret","Chrimata1.5":"secret","TraderTwo":"secret","Chrimata2":"secret","Chrimata2.5":"secret","Chrimata3":"secret","Chrimata4":"secret","Chrimata4.5":"secret","Chrimata5":"secret","Chrimata6":"secret"}}
+2023-03-16 14:29:36,007 [INFO   ] [CONTROLLER] starting the match
+2023-03-16 14:29:36,007 [INFO   ] [EXECUTION] starting execution server: host=127.0.0.1 port=12345
+2023-03-16 14:29:36,008 [INFO   ] [INFORMATION] starting information publisher: type=mmap name=info.dat
+2023-03-16 14:29:36,012 [INFO   ] [HEADS_UP] starting heads-up display server: host=127.0.0.1 port=12347
+2023-03-16 14:29:36,012 [INFO   ] [INFORMATION] information channel established
+2023-03-16 14:29:36,060 [INFO   ] [CONNECTION] fd=764 connection established: peer=127.0.0.1:63062
+2023-03-16 14:29:36,060 [INFO   ] [EXECUTION] fd=764 'Chrimata6' is ready!
+2023-03-16 14:29:37,202 [INFO   ] [CONNECTION] fd=212 connection established: peer=127.0.0.1:63066
+2023-03-16 14:29:41,016 [INFO   ] [CONTROLLER] market open
+2023-03-16 14:29:47,430 [INFO   ] [CONNECTION] fd=764 connection lost
+2023-03-16 14:29:47,431 [WARNING] [EXECUTION] fd=764 lost connection to auto-trader:
+2023-03-16 14:31:22,799 [INFO   ] [APP] exchange started with arguments={rtg.py, run, rp_trader.py}
+2023-03-16 14:31:22,799 [INFO   ] [APP] configuration={"Engine":{"MarketDataFile":"data/market_data2.csv","MarketEventInterval":0.05,"MarketOpenDelay":5.0,"MatchEventsFile":"match_events.csv","ScoreBoardFile":"score_board.csv","Speed":2.0,"TickInterval":0.25},"Execution":{"Host":"127.0.0.1","Port":12345},"Fees":{"Maker":-0.0001,"Taker":0.0002},"Hud":{"Host":"127.0.0.1","Port":12347},"Information":{"Type":"mmap","Name":"info.dat"},"Instrument":{"EtfClamp":0.002,"TickSize":1.0},"Limits":{"ActiveOrderCountLimit":10,"ActiveVolumeLimit":200,"MessageFrequencyInterval":1.0,"MessageFrequencyLimit":50,"PositionLimit":100},"Traders":{"Chrimata":"secret","Chrimata1.5":"secret","TraderTwo":"secret","Chrimata2":"secret","Chrimata2.5":"secret","Chrimata3":"secret","Chrimata4":"secret","Chrimata4.5":"secret","Chrimata5":"secret","Chrimata6":"secret"}}
+2023-03-16 14:31:22,800 [INFO   ] [CONTROLLER] starting the match
+2023-03-16 14:31:22,800 [INFO   ] [EXECUTION] starting execution server: host=127.0.0.1 port=12345
+2023-03-16 14:31:22,800 [INFO   ] [INFORMATION] starting information publisher: type=mmap name=info.dat
+2023-03-16 14:31:22,804 [INFO   ] [HEADS_UP] starting heads-up display server: host=127.0.0.1 port=12347
+2023-03-16 14:31:22,804 [INFO   ] [INFORMATION] information channel established
+2023-03-16 14:31:22,875 [INFO   ] [CONNECTION] fd=528 connection established: peer=127.0.0.1:63118
+2023-03-16 14:31:22,875 [INFO   ] [EXECUTION] fd=528 'Chrimata6' is ready!
+2023-03-16 14:31:23,994 [INFO   ] [CONNECTION] fd=292 connection established: peer=127.0.0.1:63120
+2023-03-16 14:31:27,823 [INFO   ] [CONTROLLER] market open
+2023-03-16 14:32:02,334 [INFO   ] [APP] exchange started with arguments={rtg.py, run, rp_trader.py}
+2023-03-16 14:32:02,335 [INFO   ] [APP] configuration={"Engine":{"MarketDataFile":"data/market_data2.csv","MarketEventInterval":0.05,"MarketOpenDelay":5.0,"MatchEventsFile":"match_events.csv","ScoreBoardFile":"score_board.csv","Speed":2.0,"TickInterval":0.25},"Execution":{"Host":"127.0.0.1","Port":12345},"Fees":{"Maker":-0.0001,"Taker":0.0002},"Hud":{"Host":"127.0.0.1","Port":12347},"Information":{"Type":"mmap","Name":"info.dat"},"Instrument":{"EtfClamp":0.002,"TickSize":1.0},"Limits":{"ActiveOrderCountLimit":10,"ActiveVolumeLimit":200,"MessageFrequencyInterval":1.0,"MessageFrequencyLimit":50,"PositionLimit":100},"Traders":{"Chrimata":"secret","Chrimata1.5":"secret","TraderTwo":"secret","Chrimata2":"secret","Chrimata2.5":"secret","Chrimata3":"secret","Chrimata4":"secret","Chrimata4.5":"secret","Chrimata5":"secret","Chrimata6":"secret"}}
+2023-03-16 14:32:02,336 [INFO   ] [CONTROLLER] starting the match
+2023-03-16 14:32:02,336 [INFO   ] [EXECUTION] starting execution server: host=127.0.0.1 port=12345
+2023-03-16 14:32:02,336 [INFO   ] [INFORMATION] starting information publisher: type=mmap name=info.dat
+2023-03-16 14:32:02,342 [INFO   ] [HEADS_UP] starting heads-up display server: host=127.0.0.1 port=12347
+2023-03-16 14:32:02,343 [INFO   ] [INFORMATION] information channel established
+2023-03-16 14:32:02,368 [INFO   ] [CONNECTION] fd=892 connection established: peer=127.0.0.1:63142
+2023-03-16 14:32:02,368 [INFO   ] [EXECUTION] fd=892 'Chrimata6' is ready!
+2023-03-16 14:32:03,400 [INFO   ] [CONNECTION] fd=488 connection established: peer=127.0.0.1:63143
+2023-03-16 14:32:07,349 [INFO   ] [CONTROLLER] market open
+2023-03-16 14:32:13,712 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=12.718000 client_order_id=1 message='price is not a multiple of tick size'
+2023-03-16 14:32:13,958 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=13.218000 client_order_id=2 message='price is not a multiple of tick size'
+2023-03-16 14:32:14,084 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=13.468000 client_order_id=3 message='price is not a multiple of tick size'
+2023-03-16 14:32:14,212 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=13.718000 client_order_id=4 message='price is not a multiple of tick size'
+2023-03-16 14:32:14,335 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=13.968000 client_order_id=5 message='price is not a multiple of tick size'
+2023-03-16 14:32:14,501 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=14.312000 client_order_id=6 message='price is not a multiple of tick size'
+2023-03-16 14:32:14,609 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=14.532000 client_order_id=7 message='price is not a multiple of tick size'
+2023-03-16 14:32:14,736 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=14.782000 client_order_id=8 message='price is not a multiple of tick size'
+2023-03-16 14:32:14,844 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=15.000000 client_order_id=9 message='price is not a multiple of tick size'
+2023-03-16 14:32:15,083 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=15.468000 client_order_id=10 message='price is not a multiple of tick size'
+2023-03-16 14:32:15,210 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=15.718000 client_order_id=11 message='price is not a multiple of tick size'
+2023-03-16 14:32:15,321 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=15.938000 client_order_id=12 message='price is not a multiple of tick size'
+2023-03-16 14:32:15,479 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=16.250000 client_order_id=13 message='price is not a multiple of tick size'
+2023-03-16 14:32:15,622 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=16.562000 client_order_id=14 message='price is not a multiple of tick size'
+2023-03-16 14:32:15,706 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=16.718000 client_order_id=15 message='price is not a multiple of tick size'
+2023-03-16 14:32:16,043 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=17.374000 client_order_id=16 message='price is not a multiple of tick size'
+2023-03-16 14:32:16,239 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=17.782000 client_order_id=17 message='price is not a multiple of tick size'
+2023-03-16 14:32:16,352 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=18.000000 client_order_id=18 message='price is not a multiple of tick size'
+2023-03-16 14:32:16,463 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=18.218000 client_order_id=19 message='price is not a multiple of tick size'
+2023-03-16 14:32:16,601 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=18.500000 client_order_id=20 message='price is not a multiple of tick size'
+2023-03-16 14:32:16,859 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=19.032000 client_order_id=21 message='price is not a multiple of tick size'
+2023-03-16 14:32:16,941 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=19.188000 client_order_id=22 message='price is not a multiple of tick size'
+2023-03-16 14:32:17,083 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=19.468000 client_order_id=23 message='price is not a multiple of tick size'
+2023-03-16 14:32:17,245 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=19.782000 client_order_id=24 message='price is not a multiple of tick size'
+2023-03-16 14:32:17,474 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=20.250000 client_order_id=25 message='price is not a multiple of tick size'
+2023-03-16 14:32:17,588 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=20.468000 client_order_id=26 message='price is not a multiple of tick size'
+2023-03-16 14:32:17,708 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=20.718000 client_order_id=27 message='price is not a multiple of tick size'
+2023-03-16 14:32:17,811 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=20.938000 client_order_id=28 message='price is not a multiple of tick size'
+2023-03-16 14:32:17,984 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=21.282000 client_order_id=29 message='price is not a multiple of tick size'
+2023-03-16 14:32:18,239 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=21.782000 client_order_id=30 message='price is not a multiple of tick size'
+2023-03-16 14:32:18,356 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=22.032000 client_order_id=31 message='price is not a multiple of tick size'
+2023-03-16 14:32:18,484 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=22.282000 client_order_id=32 message='price is not a multiple of tick size'
+2023-03-16 14:32:18,578 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=22.468000 client_order_id=33 message='price is not a multiple of tick size'
+2023-03-16 14:32:18,719 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=22.750000 client_order_id=34 message='price is not a multiple of tick size'
+2023-03-16 14:32:18,985 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=23.282000 client_order_id=35 message='price is not a multiple of tick size'
+2023-03-16 14:32:19,083 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=23.468000 client_order_id=36 message='price is not a multiple of tick size'
+2023-03-16 14:32:19,242 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=23.782000 client_order_id=37 message='price is not a multiple of tick size'
+2023-03-16 14:32:19,589 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=24.500000 client_order_id=38 message='price is not a multiple of tick size'
+2023-03-16 14:32:19,765 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=24.844000 client_order_id=39 message='price is not a multiple of tick size'
+2023-03-16 14:32:19,856 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=25.032000 client_order_id=40 message='price is not a multiple of tick size'
+2023-03-16 14:32:19,940 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=25.188000 client_order_id=41 message='price is not a multiple of tick size'
+2023-03-16 14:32:20,093 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=25.500000 client_order_id=42 message='price is not a multiple of tick size'
+2023-03-16 14:32:20,239 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=25.782000 client_order_id=43 message='price is not a multiple of tick size'
+2023-03-16 14:32:20,314 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=25.938000 client_order_id=44 message='price is not a multiple of tick size'
+2023-03-16 14:32:20,489 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=26.282000 client_order_id=45 message='price is not a multiple of tick size'
+2023-03-16 14:32:20,605 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=26.532000 client_order_id=46 message='price is not a multiple of tick size'
+2023-03-16 14:32:20,728 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=26.750000 client_order_id=47 message='price is not a multiple of tick size'
+2023-03-16 14:32:20,884 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=27.062000 client_order_id=48 message='price is not a multiple of tick size'
+2023-03-16 14:32:20,947 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=27.188000 client_order_id=49 message='price is not a multiple of tick size'
+2023-03-16 14:32:21,088 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=27.468000 client_order_id=50 message='price is not a multiple of tick size'
+2023-03-16 14:32:21,266 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=27.844000 client_order_id=51 message='price is not a multiple of tick size'
+2023-03-16 14:32:21,360 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=28.032000 client_order_id=52 message='price is not a multiple of tick size'
+2023-03-16 14:32:21,451 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=28.218000 client_order_id=53 message='price is not a multiple of tick size'
+2023-03-16 14:32:21,703 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=28.718000 client_order_id=54 message='price is not a multiple of tick size'
+2023-03-16 14:32:21,829 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=28.968000 client_order_id=55 message='price is not a multiple of tick size'
+2023-03-16 14:32:21,959 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=29.218000 client_order_id=56 message='price is not a multiple of tick size'
+2023-03-16 14:32:22,086 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=29.468000 client_order_id=57 message='price is not a multiple of tick size'
+2023-03-16 14:32:22,215 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=29.750000 client_order_id=58 message='price is not a multiple of tick size'
+2023-03-16 14:32:22,326 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=29.968000 client_order_id=59 message='price is not a multiple of tick size'
+2023-03-16 14:32:22,462 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=30.218000 client_order_id=60 message='price is not a multiple of tick size'
+2023-03-16 14:32:22,604 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=30.500000 client_order_id=61 message='price is not a multiple of tick size'
+2023-03-16 14:32:22,742 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=30.782000 client_order_id=62 message='price is not a multiple of tick size'
+2023-03-16 14:32:22,832 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=30.968000 client_order_id=63 message='price is not a multiple of tick size'
+2023-03-16 14:32:22,987 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=31.282000 client_order_id=64 message='price is not a multiple of tick size'
+2023-03-16 14:32:23,115 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=31.532000 client_order_id=65 message='price is not a multiple of tick size'
+2023-03-16 14:32:23,241 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=31.782000 client_order_id=66 message='price is not a multiple of tick size'
+2023-03-16 14:32:23,470 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=32.250000 client_order_id=67 message='price is not a multiple of tick size'
+2023-03-16 14:32:23,623 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=32.562000 client_order_id=68 message='price is not a multiple of tick size'
+2023-03-16 14:32:23,740 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=32.782000 client_order_id=69 message='price is not a multiple of tick size'
+2023-03-16 14:32:23,851 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=33.000000 client_order_id=70 message='price is not a multiple of tick size'
+2023-03-16 14:32:23,972 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=33.250000 client_order_id=71 message='price is not a multiple of tick size'
+2023-03-16 14:32:24,065 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=33.438000 client_order_id=72 message='price is not a multiple of tick size'
+2023-03-16 14:32:24,221 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=33.750000 client_order_id=73 message='price is not a multiple of tick size'
+2023-03-16 14:32:24,361 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=34.032000 client_order_id=74 message='price is not a multiple of tick size'
+2023-03-16 14:32:24,459 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=34.218000 client_order_id=75 message='price is not a multiple of tick size'
+2023-03-16 14:32:24,618 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=34.532000 client_order_id=76 message='price is not a multiple of tick size'
+2023-03-16 14:32:24,750 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=34.812000 client_order_id=77 message='price is not a multiple of tick size'
+2023-03-16 14:32:24,854 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=35.000000 client_order_id=78 message='price is not a multiple of tick size'
+2023-03-16 14:32:24,953 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=35.218000 client_order_id=79 message='price is not a multiple of tick size'
+2023-03-16 14:32:25,350 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=36.000000 client_order_id=80 message='price is not a multiple of tick size'
+2023-03-16 14:32:25,459 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=36.218000 client_order_id=81 message='price is not a multiple of tick size'
+2023-03-16 14:32:25,595 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=36.500000 client_order_id=82 message='price is not a multiple of tick size'
+2023-03-16 14:32:25,694 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=36.688000 client_order_id=83 message='price is not a multiple of tick size'
+2023-03-16 14:32:25,866 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=37.032000 client_order_id=84 message='price is not a multiple of tick size'
+2023-03-16 14:32:25,992 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=37.282000 client_order_id=85 message='price is not a multiple of tick size'
+2023-03-16 14:32:26,371 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=38.062000 client_order_id=86 message='price is not a multiple of tick size'
+2023-03-16 14:32:26,493 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=38.282000 client_order_id=87 message='price is not a multiple of tick size'
+2023-03-16 14:32:26,611 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=38.532000 client_order_id=88 message='price is not a multiple of tick size'
+2023-03-16 14:32:26,743 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=38.782000 client_order_id=89 message='price is not a multiple of tick size'
+2023-03-16 14:32:26,838 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=38.968000 client_order_id=90 message='price is not a multiple of tick size'
+2023-03-16 14:32:26,982 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=39.282000 client_order_id=91 message='price is not a multiple of tick size'
+2023-03-16 14:32:27,087 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=39.468000 client_order_id=92 message='price is not a multiple of tick size'
+2023-03-16 14:32:27,206 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=39.718000 client_order_id=93 message='price is not a multiple of tick size'
+2023-03-16 14:32:27,336 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=39.968000 client_order_id=94 message='price is not a multiple of tick size'
+2023-03-16 14:32:27,452 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=40.218000 client_order_id=95 message='price is not a multiple of tick size'
+2023-03-16 14:32:27,577 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=40.468000 client_order_id=96 message='price is not a multiple of tick size'
+2023-03-16 14:32:27,882 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=41.062000 client_order_id=97 message='price is not a multiple of tick size'
+2023-03-16 14:32:27,945 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=41.188000 client_order_id=98 message='price is not a multiple of tick size'
+2023-03-16 14:32:28,085 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=41.468000 client_order_id=99 message='price is not a multiple of tick size'
+2023-03-16 14:32:28,253 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=41.812000 client_order_id=100 message='price is not a multiple of tick size'
+2023-03-16 14:32:28,334 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=41.968000 client_order_id=101 message='price is not a multiple of tick size'
+2023-03-16 14:32:28,493 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=42.282000 client_order_id=102 message='price is not a multiple of tick size'
+2023-03-16 14:32:28,586 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=42.468000 client_order_id=103 message='price is not a multiple of tick size'
+2023-03-16 14:32:28,694 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=42.688000 client_order_id=104 message='price is not a multiple of tick size'
+2023-03-16 14:32:28,846 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=43.000000 client_order_id=105 message='price is not a multiple of tick size'
+2023-03-16 14:32:28,970 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=43.250000 client_order_id=106 message='price is not a multiple of tick size'
+2023-03-16 14:32:29,086 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=43.468000 client_order_id=107 message='price is not a multiple of tick size'
+2023-03-16 14:32:29,251 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=43.812000 client_order_id=108 message='price is not a multiple of tick size'
+2023-03-16 14:32:29,371 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=44.062000 client_order_id=109 message='price is not a multiple of tick size'
+2023-03-16 14:32:29,485 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=44.282000 client_order_id=110 message='price is not a multiple of tick size'
+2023-03-16 14:32:29,706 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=44.718000 client_order_id=111 message='price is not a multiple of tick size'
+2023-03-16 14:32:29,848 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=45.000000 client_order_id=112 message='price is not a multiple of tick size'
+2023-03-16 14:32:29,943 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=45.188000 client_order_id=113 message='price is not a multiple of tick size'
+2023-03-16 14:32:30,071 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=45.438000 client_order_id=114 message='price is not a multiple of tick size'
+2023-03-16 14:32:30,218 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=45.750000 client_order_id=115 message='price is not a multiple of tick size'
+2023-03-16 14:32:30,608 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=46.532000 client_order_id=116 message='price is not a multiple of tick size'
+2023-03-16 14:32:30,718 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=46.750000 client_order_id=117 message='price is not a multiple of tick size'
+2023-03-16 14:32:30,991 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=47.282000 client_order_id=118 message='price is not a multiple of tick size'
+2023-03-16 14:32:31,104 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=47.500000 client_order_id=119 message='price is not a multiple of tick size'
+2023-03-16 14:32:31,370 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=48.032000 client_order_id=120 message='price is not a multiple of tick size'
+2023-03-16 14:32:31,484 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=48.282000 client_order_id=121 message='price is not a multiple of tick size'
+2023-03-16 14:32:31,608 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=48.532000 client_order_id=122 message='price is not a multiple of tick size'
+2023-03-16 14:32:31,714 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=48.750000 client_order_id=123 message='price is not a multiple of tick size'
+2023-03-16 14:32:31,871 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=49.032000 client_order_id=124 message='price is not a multiple of tick size'
+2023-03-16 14:32:31,979 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=49.250000 client_order_id=125 message='price is not a multiple of tick size'
+2023-03-16 14:32:32,091 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=49.500000 client_order_id=126 message='price is not a multiple of tick size'
+2023-03-16 14:32:32,201 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=49.718000 client_order_id=127 message='price is not a multiple of tick size'
+2023-03-16 14:32:32,342 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=50.000000 client_order_id=128 message='price is not a multiple of tick size'
+2023-03-16 14:32:32,452 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=50.218000 client_order_id=129 message='price is not a multiple of tick size'
+2023-03-16 14:32:33,333 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=51.968000 client_order_id=130 message='price is not a multiple of tick size'
+2023-03-16 14:32:33,461 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=52.218000 client_order_id=131 message='price is not a multiple of tick size'
+2023-03-16 14:32:33,602 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=52.500000 client_order_id=132 message='price is not a multiple of tick size'
+2023-03-16 14:32:33,714 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=52.750000 client_order_id=133 message='price is not a multiple of tick size'
+2023-03-16 14:32:33,843 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=53.000000 client_order_id=134 message='price is not a multiple of tick size'
+2023-03-16 14:32:33,953 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=53.218000 client_order_id=135 message='price is not a multiple of tick size'
+2023-03-16 14:32:34,332 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=53.968000 client_order_id=136 message='price is not a multiple of tick size'
+2023-03-16 14:32:34,460 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=54.218000 client_order_id=137 message='price is not a multiple of tick size'
+2023-03-16 14:32:34,631 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=54.562000 client_order_id=138 message='price is not a multiple of tick size'
+2023-03-16 14:32:34,909 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=55.124000 client_order_id=139 message='price is not a multiple of tick size'
+2023-03-16 14:32:34,979 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=55.250000 client_order_id=140 message='price is not a multiple of tick size'
+2023-03-16 14:32:35,108 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=55.532000 client_order_id=141 message='price is not a multiple of tick size'
+2023-03-16 14:32:35,205 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=55.718000 client_order_id=142 message='price is not a multiple of tick size'
+2023-03-16 14:32:35,330 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=55.968000 client_order_id=143 message='price is not a multiple of tick size'
+2023-03-16 14:32:35,458 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=56.218000 client_order_id=144 message='price is not a multiple of tick size'
+2023-03-16 14:32:35,585 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=56.468000 client_order_id=145 message='price is not a multiple of tick size'
+2023-03-16 14:32:35,722 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=56.750000 client_order_id=146 message='price is not a multiple of tick size'
+2023-03-16 14:32:35,868 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=57.032000 client_order_id=147 message='price is not a multiple of tick size'
+2023-03-16 14:32:35,955 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=57.218000 client_order_id=148 message='price is not a multiple of tick size'
+2023-03-16 14:32:36,092 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=57.500000 client_order_id=149 message='price is not a multiple of tick size'
+2023-03-16 14:32:36,243 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=57.782000 client_order_id=150 message='price is not a multiple of tick size'
+2023-03-16 14:32:36,471 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=58.250000 client_order_id=151 message='price is not a multiple of tick size'
+2023-03-16 14:32:36,616 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=58.532000 client_order_id=152 message='price is not a multiple of tick size'
+2023-03-16 14:32:36,714 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=58.718000 client_order_id=153 message='price is not a multiple of tick size'
+2023-03-16 14:32:36,834 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=58.968000 client_order_id=154 message='price is not a multiple of tick size'
+2023-03-16 14:32:36,944 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=59.188000 client_order_id=155 message='price is not a multiple of tick size'
+2023-03-16 14:32:37,077 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=59.468000 client_order_id=156 message='price is not a multiple of tick size'
+2023-03-16 14:32:37,251 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=59.812000 client_order_id=157 message='price is not a multiple of tick size'
+2023-03-16 14:32:37,335 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=59.968000 client_order_id=158 message='price is not a multiple of tick size'
+2023-03-16 14:32:37,482 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=60.282000 client_order_id=159 message='price is not a multiple of tick size'
+2023-03-16 14:32:37,583 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=60.468000 client_order_id=160 message='price is not a multiple of tick size'
+2023-03-16 14:32:37,751 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=60.812000 client_order_id=161 message='price is not a multiple of tick size'
+2023-03-16 14:32:37,848 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=61.000000 client_order_id=162 message='price is not a multiple of tick size'
+2023-03-16 14:32:38,007 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=61.312000 client_order_id=163 message='price is not a multiple of tick size'
+2023-03-16 14:32:38,131 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=61.562000 client_order_id=164 message='price is not a multiple of tick size'
+2023-03-16 14:32:38,198 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=61.718000 client_order_id=165 message='price is not a multiple of tick size'
+2023-03-16 14:32:38,370 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=62.032000 client_order_id=166 message='price is not a multiple of tick size'
+2023-03-16 14:32:38,517 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=62.344000 client_order_id=167 message='price is not a multiple of tick size'
+2023-03-16 14:32:38,600 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=62.500000 client_order_id=168 message='price is not a multiple of tick size'
+2023-03-16 14:32:38,717 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=62.750000 client_order_id=169 message='price is not a multiple of tick size'
+2023-03-16 14:32:38,973 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=63.250000 client_order_id=170 message='price is not a multiple of tick size'
+2023-03-16 14:32:39,111 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=63.532000 client_order_id=171 message='price is not a multiple of tick size'
+2023-03-16 14:32:39,222 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=63.750000 client_order_id=172 message='price is not a multiple of tick size'
+2023-03-16 14:32:39,745 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=64.812000 client_order_id=173 message='price is not a multiple of tick size'
+2023-03-16 14:32:39,845 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=65.000000 client_order_id=174 message='price is not a multiple of tick size'
+2023-03-16 14:32:39,987 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=65.282000 client_order_id=175 message='price is not a multiple of tick size'
+2023-03-16 14:32:40,062 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=65.438000 client_order_id=176 message='price is not a multiple of tick size'
+2023-03-16 14:32:40,254 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=65.812000 client_order_id=177 message='price is not a multiple of tick size'
+2023-03-16 14:32:40,491 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=66.282000 client_order_id=178 message='price is not a multiple of tick size'
+2023-03-16 14:32:40,587 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=66.468000 client_order_id=179 message='price is not a multiple of tick size'
+2023-03-16 14:32:40,704 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=66.718000 client_order_id=180 message='price is not a multiple of tick size'
+2023-03-16 14:32:40,982 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=67.282000 client_order_id=181 message='price is not a multiple of tick size'
+2023-03-16 14:32:41,190 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=67.688000 client_order_id=182 message='price is not a multiple of tick size'
+2023-03-16 14:32:41,454 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=68.218000 client_order_id=183 message='price is not a multiple of tick size'
+2023-03-16 14:32:41,618 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=68.532000 client_order_id=184 message='price is not a multiple of tick size'
+2023-03-16 14:32:41,740 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=68.782000 client_order_id=185 message='price is not a multiple of tick size'
+2023-03-16 14:32:41,832 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=68.968000 client_order_id=186 message='price is not a multiple of tick size'
+2023-03-16 14:32:41,994 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=69.282000 client_order_id=187 message='price is not a multiple of tick size'
+2023-03-16 14:32:42,250 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=69.812000 client_order_id=188 message='price is not a multiple of tick size'
+2023-03-16 14:32:42,361 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=70.032000 client_order_id=189 message='price is not a multiple of tick size'
+2023-03-16 14:32:42,468 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=70.250000 client_order_id=190 message='price is not a multiple of tick size'
+2023-03-16 14:32:42,601 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=70.500000 client_order_id=191 message='price is not a multiple of tick size'
+2023-03-16 14:32:42,734 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=70.750000 client_order_id=192 message='price is not a multiple of tick size'
+2023-03-16 14:32:42,834 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=70.968000 client_order_id=193 message='price is not a multiple of tick size'
+2023-03-16 14:32:42,989 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=71.282000 client_order_id=194 message='price is not a multiple of tick size'
+2023-03-16 14:32:43,086 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=71.468000 client_order_id=195 message='price is not a multiple of tick size'
+2023-03-16 14:32:43,203 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=71.718000 client_order_id=196 message='price is not a multiple of tick size'
+2023-03-16 14:32:43,356 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=72.032000 client_order_id=197 message='price is not a multiple of tick size'
+2023-03-16 14:32:43,465 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=72.250000 client_order_id=198 message='price is not a multiple of tick size'
+2023-03-16 14:32:43,623 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=72.562000 client_order_id=199 message='price is not a multiple of tick size'
+2023-03-16 14:32:43,733 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=72.782000 client_order_id=200 message='price is not a multiple of tick size'
+2023-03-16 14:32:43,841 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=73.000000 client_order_id=201 message='price is not a multiple of tick size'
+2023-03-16 14:32:43,970 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=73.250000 client_order_id=202 message='price is not a multiple of tick size'
+2023-03-16 14:32:44,111 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=73.532000 client_order_id=203 message='price is not a multiple of tick size'
+2023-03-16 14:32:44,223 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=73.750000 client_order_id=204 message='price is not a multiple of tick size'
+2023-03-16 14:32:44,349 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=74.000000 client_order_id=205 message='price is not a multiple of tick size'
+2023-03-16 14:32:44,507 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=74.312000 client_order_id=206 message='price is not a multiple of tick size'
+2023-03-16 14:32:44,616 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=74.532000 client_order_id=207 message='price is not a multiple of tick size'
+2023-03-16 14:32:44,759 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=74.812000 client_order_id=208 message='price is not a multiple of tick size'
+2023-03-16 14:32:44,841 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=75.000000 client_order_id=209 message='price is not a multiple of tick size'
+2023-03-16 14:32:45,092 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=75.500000 client_order_id=210 message='price is not a multiple of tick size'
+2023-03-16 14:32:45,330 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=75.968000 client_order_id=211 message='price is not a multiple of tick size'
+2023-03-16 14:32:45,461 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=76.218000 client_order_id=212 message='price is not a multiple of tick size'
+2023-03-16 14:32:45,582 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=76.468000 client_order_id=213 message='price is not a multiple of tick size'
+2023-03-16 14:32:45,837 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=76.968000 client_order_id=214 message='price is not a multiple of tick size'
+2023-03-16 14:32:46,090 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=77.500000 client_order_id=215 message='price is not a multiple of tick size'
+2023-03-16 14:32:46,202 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=77.718000 client_order_id=216 message='price is not a multiple of tick size'
+2023-03-16 14:32:46,738 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=78.782000 client_order_id=217 message='price is not a multiple of tick size'
+2023-03-16 14:32:46,817 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=78.938000 client_order_id=218 message='price is not a multiple of tick size'
+2023-03-16 14:32:46,988 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=79.250000 client_order_id=219 message='price is not a multiple of tick size'
+2023-03-16 14:32:47,083 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=79.468000 client_order_id=220 message='price is not a multiple of tick size'
+2023-03-16 14:32:47,596 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=80.500000 client_order_id=221 message='price is not a multiple of tick size'
+2023-03-16 14:32:47,735 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=80.782000 client_order_id=222 message='price is not a multiple of tick size'
+2023-03-16 14:32:47,831 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=80.968000 client_order_id=223 message='price is not a multiple of tick size'
+2023-03-16 14:32:48,084 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=81.468000 client_order_id=224 message='price is not a multiple of tick size'
+2023-03-16 14:32:48,258 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=81.812000 client_order_id=225 message='price is not a multiple of tick size'
+2023-03-16 14:32:48,369 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=82.032000 client_order_id=226 message='price is not a multiple of tick size'
+2023-03-16 14:32:48,467 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=82.250000 client_order_id=227 message='price is not a multiple of tick size'
+2023-03-16 14:32:48,601 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=82.500000 client_order_id=228 message='price is not a multiple of tick size'
+2023-03-16 14:32:48,746 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=82.812000 client_order_id=229 message='price is not a multiple of tick size'
+2023-03-16 14:32:48,864 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=83.032000 client_order_id=230 message='price is not a multiple of tick size'
+2023-03-16 14:32:48,937 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=83.188000 client_order_id=231 message='price is not a multiple of tick size'
+2023-03-16 14:32:49,062 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=83.438000 client_order_id=232 message='price is not a multiple of tick size'
+2023-03-16 14:32:49,617 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=84.532000 client_order_id=233 message='price is not a multiple of tick size'
+2023-03-16 14:32:49,762 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=84.844000 client_order_id=234 message='price is not a multiple of tick size'
+2023-03-16 14:32:50,010 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=85.312000 client_order_id=235 message='price is not a multiple of tick size'
+2023-03-16 14:32:50,272 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=85.844000 client_order_id=236 message='price is not a multiple of tick size'
+2023-03-16 14:32:50,357 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=86.032000 client_order_id=237 message='price is not a multiple of tick size'
+2023-03-16 14:32:50,489 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=86.282000 client_order_id=238 message='price is not a multiple of tick size'
+2023-03-16 14:32:50,730 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=86.750000 client_order_id=239 message='price is not a multiple of tick size'
+2023-03-16 14:32:51,003 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=87.312000 client_order_id=240 message='price is not a multiple of tick size'
+2023-03-16 14:32:51,095 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=87.500000 client_order_id=241 message='price is not a multiple of tick size'
+2023-03-16 14:32:51,218 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=87.750000 client_order_id=242 message='price is not a multiple of tick size'
+2023-03-16 14:32:51,358 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=88.032000 client_order_id=243 message='price is not a multiple of tick size'
+2023-03-16 14:32:51,609 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=88.532000 client_order_id=244 message='price is not a multiple of tick size'
+2023-03-16 14:32:51,708 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=88.718000 client_order_id=245 message='price is not a multiple of tick size'
+2023-03-16 14:32:51,869 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=89.032000 client_order_id=246 message='price is not a multiple of tick size'
+2023-03-16 14:32:51,978 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=89.250000 client_order_id=247 message='price is not a multiple of tick size'
+2023-03-16 14:32:52,200 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=89.718000 client_order_id=248 message='price is not a multiple of tick size'
+2023-03-16 14:32:52,487 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=90.282000 client_order_id=249 message='price is not a multiple of tick size'
+2023-03-16 14:32:52,609 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=90.532000 client_order_id=250 message='price is not a multiple of tick size'
+2023-03-16 14:32:52,740 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=90.782000 client_order_id=251 message='price is not a multiple of tick size'
+2023-03-16 14:32:52,835 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=90.968000 client_order_id=252 message='price is not a multiple of tick size'
+2023-03-16 14:32:52,972 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=91.250000 client_order_id=253 message='price is not a multiple of tick size'
+2023-03-16 14:32:53,479 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=92.250000 client_order_id=254 message='price is not a multiple of tick size'
+2023-03-16 14:32:53,610 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=92.532000 client_order_id=255 message='price is not a multiple of tick size'
+2023-03-16 14:32:53,858 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=93.032000 client_order_id=256 message='price is not a multiple of tick size'
+2023-03-16 14:32:53,997 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=93.312000 client_order_id=257 message='price is not a multiple of tick size'
+2023-03-16 14:32:54,078 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=93.468000 client_order_id=258 message='price is not a multiple of tick size'
+2023-03-16 14:32:54,251 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=93.812000 client_order_id=259 message='price is not a multiple of tick size'
+2023-03-16 14:32:54,311 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=93.938000 client_order_id=260 message='price is not a multiple of tick size'
+2023-03-16 14:32:54,738 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=94.782000 client_order_id=261 message='price is not a multiple of tick size'
+2023-03-16 14:32:54,869 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=95.032000 client_order_id=262 message='price is not a multiple of tick size'
+2023-03-16 14:32:54,963 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=95.218000 client_order_id=263 message='price is not a multiple of tick size'
+2023-03-16 14:32:55,081 [INFO   ] [COMPETITOR] 'Chrimata6' sent error message: time=95.468000 client_order_id=264 message='price is not a multiple of tick size'
+2023-03-16 14:32:55,086 [ERROR  ] [CONNECTION] fd=488 connection lost:
+Traceback (most recent call last):
+  File "C:\Users\thewa\miniconda3\envs\rtg\Lib\asyncio\selector_events.py", line 987, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2023-03-16 14:33:36,292 [INFO   ] [APP] exchange started with arguments={rtg.py, run, rp_trader.py}
+2023-03-16 14:33:36,293 [INFO   ] [APP] configuration={"Engine":{"MarketDataFile":"data/market_data2.csv","MarketEventInterval":0.05,"MarketOpenDelay":5.0,"MatchEventsFile":"match_events.csv","ScoreBoardFile":"score_board.csv","Speed":2.0,"TickInterval":0.25},"Execution":{"Host":"127.0.0.1","Port":12345},"Fees":{"Maker":-0.0001,"Taker":0.0002},"Hud":{"Host":"127.0.0.1","Port":12347},"Information":{"Type":"mmap","Name":"info.dat"},"Instrument":{"EtfClamp":0.002,"TickSize":1.0},"Limits":{"ActiveOrderCountLimit":10,"ActiveVolumeLimit":200,"MessageFrequencyInterval":1.0,"MessageFrequencyLimit":50,"PositionLimit":100},"Traders":{"Chrimata":"secret","Chrimata1.5":"secret","TraderTwo":"secret","Chrimata2":"secret","Chrimata2.5":"secret","Chrimata3":"secret","Chrimata4":"secret","Chrimata4.5":"secret","Chrimata5":"secret","Chrimata6":"secret"}}
+2023-03-16 14:33:36,294 [INFO   ] [CONTROLLER] starting the match
+2023-03-16 14:33:36,294 [INFO   ] [EXECUTION] starting execution server: host=127.0.0.1 port=12345
+2023-03-16 14:33:36,294 [INFO   ] [INFORMATION] starting information publisher: type=mmap name=info.dat
+2023-03-16 14:33:36,299 [INFO   ] [HEADS_UP] starting heads-up display server: host=127.0.0.1 port=12347
+2023-03-16 14:33:36,299 [INFO   ] [INFORMATION] information channel established
+2023-03-16 14:33:41,307 [INFO   ] [CONTROLLER] market open
+2023-03-16 14:33:41,308 [INFO   ] [TIMER] shutting down the match: time=0.000000 reason='no remaining competitors'
+2023-03-16 14:33:41,309 [INFO   ] [MATCH_EVENTS] writer thread complete after processing 0 match events
+2023-03-16 14:33:41,309 [INFO   ] [SCORE_BOARD] writer thread complete after processing 0 score records
+2023-03-16 14:33:41,310 [INFO   ] [APP] closing event loop
+2023-03-16 14:34:20,593 [INFO   ] [APP] exchange started with arguments={rtg.py, run, rp_trader.py}
+2023-03-16 14:34:20,593 [INFO   ] [APP] configuration={"Engine":{"MarketDataFile":"data/market_data2.csv","MarketEventInterval":0.05,"MarketOpenDelay":5.0,"MatchEventsFile":"match_events.csv","ScoreBoardFile":"score_board.csv","Speed":2.0,"TickInterval":0.25},"Execution":{"Host":"127.0.0.1","Port":12345},"Fees":{"Maker":-0.0001,"Taker":0.0002},"Hud":{"Host":"127.0.0.1","Port":12347},"Information":{"Type":"mmap","Name":"info.dat"},"Instrument":{"EtfClamp":0.002,"TickSize":1.0},"Limits":{"ActiveOrderCountLimit":10,"ActiveVolumeLimit":200,"MessageFrequencyInterval":1.0,"MessageFrequencyLimit":50,"PositionLimit":100},"Traders":{"Chrimata":"secret","Chrimata1.5":"secret","TraderTwo":"secret","Chrimata2":"secret","Chrimata2.5":"secret","Chrimata3":"secret","Chrimata4":"secret","Chrimata4.5":"secret","Chrimata5":"secret","Chrimata6":"secret"}}
+2023-03-16 14:34:20,594 [INFO   ] [CONTROLLER] starting the match
+2023-03-16 14:34:20,594 [INFO   ] [EXECUTION] starting execution server: host=127.0.0.1 port=12345
+2023-03-16 14:34:20,594 [INFO   ] [INFORMATION] starting information publisher: type=mmap name=info.dat
+2023-03-16 14:34:20,599 [INFO   ] [HEADS_UP] starting heads-up display server: host=127.0.0.1 port=12347
+2023-03-16 14:34:20,599 [INFO   ] [INFORMATION] information channel established
+2023-03-16 14:34:20,620 [INFO   ] [CONNECTION] fd=1012 connection established: peer=127.0.0.1:63228
+2023-03-16 14:34:20,621 [INFO   ] [EXECUTION] fd=1012 'Chrimata6' is ready!
+2023-03-16 14:34:21,768 [INFO   ] [CONNECTION] fd=956 connection established: peer=127.0.0.1:63229
+2023-03-16 14:34:25,618 [INFO   ] [CONTROLLER] market open
+2023-03-16 14:35:29,546 [INFO   ] [APP] exchange started with arguments={rtg.py, run, rp_trader.py}
+2023-03-16 14:35:29,547 [INFO   ] [APP] configuration={"Engine":{"MarketDataFile":"data/market_data2.csv","MarketEventInterval":0.05,"MarketOpenDelay":5.0,"MatchEventsFile":"match_events.csv","ScoreBoardFile":"score_board.csv","Speed":2.0,"TickInterval":0.25},"Execution":{"Host":"127.0.0.1","Port":12345},"Fees":{"Maker":-0.0001,"Taker":0.0002},"Hud":{"Host":"127.0.0.1","Port":12347},"Information":{"Type":"mmap","Name":"info.dat"},"Instrument":{"EtfClamp":0.002,"TickSize":1.0},"Limits":{"ActiveOrderCountLimit":10,"ActiveVolumeLimit":200,"MessageFrequencyInterval":1.0,"MessageFrequencyLimit":50,"PositionLimit":100},"Traders":{"Chrimata":"secret","Chrimata1.5":"secret","TraderTwo":"secret","Chrimata2":"secret","Chrimata2.5":"secret","Chrimata3":"secret","Chrimata4":"secret","Chrimata4.5":"secret","Chrimata5":"secret","Chrimata6":"secret"}}
+2023-03-16 14:35:29,547 [INFO   ] [CONTROLLER] starting the match
+2023-03-16 14:35:29,547 [INFO   ] [EXECUTION] starting execution server: host=127.0.0.1 port=12345
+2023-03-16 14:35:29,547 [INFO   ] [INFORMATION] starting information publisher: type=mmap name=info.dat
+2023-03-16 14:35:29,553 [INFO   ] [HEADS_UP] starting heads-up display server: host=127.0.0.1 port=12347
+2023-03-16 14:35:29,554 [INFO   ] [INFORMATION] information channel established
+2023-03-16 14:35:29,599 [INFO   ] [CONNECTION] fd=580 connection established: peer=127.0.0.1:63273
+2023-03-16 14:35:29,599 [INFO   ] [EXECUTION] fd=580 'Chrimata6' is ready!
+2023-03-16 14:35:30,721 [INFO   ] [CONNECTION] fd=608 connection established: peer=127.0.0.1:63274
+2023-03-16 14:35:34,567 [INFO   ] [CONTROLLER] market open
