@@ -73,7 +73,7 @@ def calc_stochastic_rsi(window):
     else:
         stoch_rsi = 0
         
-def bollinger_bands(bWindow, bWidth, mAVG, mSD):
+def bollinger_bands(bWidth, mAVG, mSD, bOffset):
     """
     ### a common technical indicator:
     
@@ -87,7 +87,7 @@ def bollinger_bands(bWindow, bWidth, mAVG, mSD):
     global high_bollinger_band
     global low_bollinger_band
 
-    boll_window = bWindow
+    
     #rollingPrices.pop(0)
     #rollingPrices.append(ratio)
 
@@ -97,8 +97,8 @@ def bollinger_bands(bWindow, bWidth, mAVG, mSD):
     SD = mSD
 
     # Set the bollinger band.
-    high_bollinger_band = MA + bWidth * SD
-    low_bollinger_band = MA - bWidth * SD
+    high_bollinger_band = MA + bWidth * SD 
+    low_bollinger_band = MA - bWidth * SD + bOffset
     #print(high_bollinger_band, low_bollinger_band)
 
 # helper function  
@@ -109,7 +109,7 @@ def calc_profit(prev):
     global cur_ratio
     
     current_profit = 0
-    print(f'prev: {prev_sig}')
+    #print(f'prev: {prev_sig}')
     if prev == 0:
         #print(cur_ratio)
         current_profit = (sell_signals[-1]/cur_ratio) - 1
@@ -117,7 +117,7 @@ def calc_profit(prev):
         current_profit = (cur_ratio/buy_signals[-1]) - 1
         
     profits.append(current_profit)
-    print(current_profit)
+    #print(current_profit)
     #print(profits)
 
 def start():
@@ -163,19 +163,19 @@ def trade(this_ratio, parm):
             
             if conditions["ZSRSI_SELL"]:# sell in pos
                 sell_signals.append(cur_ratio)
-                calc_profit(prev_sig)
-                # if prev_sig == 1:
-                #     calc_profit(prev_sig)
-                # elif prev_sig == None:
-                #     calc_profit(prev_sig)
+                #calc_profit(prev_sig)
+                if prev_sig == 1:
+                    calc_profit(prev_sig)
+                elif prev_sig == None:
+                    calc_profit(prev_sig)
                 prev_sig = 0
             elif conditions["ZSRSI_BUY"]:# buy in pos
                 buy_signals.append(cur_ratio)
-                calc_profit(prev_sig)
-                # if prev_sig == 0:
-                #     calc_profit(prev_sig)
-                # elif prev_sig == None:
-                #     calc_profit(prev_sig)
+                #calc_profit(prev_sig)
+                if prev_sig == 0:
+                    calc_profit(prev_sig)
+                elif prev_sig == None:
+                    calc_profit(prev_sig)
                 prev_sig = 1
             else:
                 movingAvSmall = calculate_rolling_average_50(int(parm['smallWindow']))
@@ -185,42 +185,44 @@ def trade(this_ratio, parm):
                 
                 if conditions["ZSRSI_SELL"]:# sell in pos
                     sell_signals.append(cur_ratio)
-                    calc_profit(prev_sig)
-                    # if prev_sig == 1:
-                    #     calc_profit(prev_sig)
-                    # elif prev_sig == None:
-                    #     calc_profit(prev_sig)
+                    #calc_profit(prev_sig)
+                    if prev_sig == 1:
+                        calc_profit(prev_sig)
+                    elif prev_sig == None:
+                        calc_profit(prev_sig)
                     prev_sig = 0
                 elif conditions["ZSRSI_BUY"]:# buy in pos
                     buy_signals.append(cur_ratio)
-                    calc_profit(prev_sig)
-                    # if prev_sig == 0:
-                    #     calc_profit(prev_sig)
-                    # elif prev_sig == None:
-                    #     calc_profit(prev_sig)
+                    #calc_profit(prev_sig)
+                    if prev_sig == 0:
+                        calc_profit(prev_sig)
+                    elif prev_sig == None:
+                        calc_profit(prev_sig)
                     prev_sig = 1
                 
         elif parm["name"] == "Bollis":
             #print("BALLER")
             #print("check")
-            bollinger_bands(int(parm["BWindow"]), parm["band_width"], movingAvg, movingSD)
-            print(f'high: {high_bollinger_band} low: {low_bollinger_band} cur: {cur_ratio}')
+            movingAvg = calculate_rolling_average_50(int(parm["BWindow"]))
+            movingSD = calculate_rolling_sd_50(int(parm["BWindow"]))
+            bollinger_bands(parm["band_width"], movingAvg, movingSD, parm["band_offset"])
+            #print(f'high: {high_bollinger_band} low: {low_bollinger_band} cur: {cur_ratio}')
             conditions = {
                     "Bolli_SELL" : cur_ratio > high_bollinger_band,
                     "Bolli_BUY" : cur_ratio < low_bollinger_band,
                   }
             if conditions["Bolli_SELL"]:# sell in pos
-                print("sell bolli")
-                print(cur_ratio)
+                #print("sell bolli")
+                #print(parm["band_width"])
                 sell_signals.append(cur_ratio)
-                calc_profit(prev_sig)
+                #calc_profit(prev_sig)
                 # if prev_sig == 1:
                 #     calc_profit(prev_sig)
                 # elif prev_sig == None:
                 #     calc_profit(prev_sig)
                 prev_sig = 0
             elif conditions["Bolli_BUY"]:# buy in pos
-                print("buy bolli")
+                #print("buy bolli")
                 buy_signals.append(cur_ratio)
                 calc_profit(prev_sig)
                 # if prev_sig == 0:
@@ -238,7 +240,7 @@ def optimize_parameters():
     
     param_space = hp.choice("indicators",
     [{
-    "name" : "ZSRSIs",
+    "name" : "ZSRSI",
     "Z_high": hp.quniform("Zh", 1.00, 1.2,q=0.001),
     "Z_low": hp.quniform("Zl", 0.7,1.00,q=0.001),
     "stoch_rs_high": hp.quniform("str_hi", 0.55, 0.9,q=0.001),
@@ -249,10 +251,11 @@ def optimize_parameters():
     "smallWindow" : windowSmall
     },
      {
-    "name" : "Bollis",
+    "name" : "Bolli",
     "Window": window,
     "BWindow": hp.quniform("b_Window", 10,50, q = 1),
-    "band_width": hp.quniform("b_width", 1,1.5, q = 0.001),
+    "band_width": hp.quniform("b_width", 1,2.5, q = 0.1),
+    "band_offset": hp.quniform("b_offset",0.5,0.9,q=0.1),
     "smallWindow" : windowSmall
     }
      ])
@@ -260,7 +263,7 @@ def optimize_parameters():
     best = fmin(fn=run,
                 space=param_space,
                 algo=tpe.suggest,
-                max_evals=200)
+                max_evals=500)
                 
     print ("Best parameters found: ", best)
     return best
@@ -297,8 +300,8 @@ def run(parm):
     reset_globals()
     ###
     cum_profits = -np.sum(temp_profits)
-    if parm["name"] == "Bollis":
-        print(parm["name"], cum_profits)
+    # if parm["name"] == "Bollis":
+    #     print(parm["name"], cum_profits)
     return cum_profits
 
     
