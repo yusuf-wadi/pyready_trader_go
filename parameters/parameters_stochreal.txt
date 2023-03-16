@@ -1,0 +1,4 @@
+Z score HI/LOW
+STOCHRSI HI/LOW
+Default Window Size
+RSI Window Size

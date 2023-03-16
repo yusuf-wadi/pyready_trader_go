@@ -1,0 +1,12 @@
+["market4 : 
+    [chrimata4 : 
+        lot_size : 20
+        rsi_window : 13
+        window : 110
+        Zh = 1.005
+        Zl = 0.995
+        SRh = 0.55
+        SRl = 0.45
+    ]
+
+]
