@@ -1,11 +1,11 @@
 {
   "Engine": {
-    "MarketDataFile": "data/market_data2.csv",
+    "MarketDataFile": "data/market_data6.csv",
     "MarketEventInterval": 0.05,
     "MarketOpenDelay": 5.0,
     "MatchEventsFile": "match_events.csv",
     "ScoreBoardFile": "score_board.csv",
-    "Speed": 2.0,
+    "Speed": 1.0,
     "TickInterval": 0.25
   },
   "Execution": {
@@ -36,16 +36,16 @@
     "PositionLimit": 100
   },
   "Traders": {
-    "Chrimata": "secret",
-    "Chrimata1.5": "secret",
-    "TraderTwo": "secret",
-    "Chrimata2" : "secret",
-    "Chrimata2.5" : "secret",
-    "Chrimata3" : "secret",
-    "Chrimata4" : "secret",
-    "Chrimata4.5" : "secret",
-    "Chrimata5" : "secret",
-    "Chrimata6" : "secret"
-
+    "Trader1": "secret",
+    "Trader2": "secret",
+    "Trader1.3": "secret",
+    "Trader1.4":"secret",
+    "Trader2.1":"secret",
+    "Trader3" : "secret",
+    "Trader3_1" : "secret",
+    "Trader3.3" : "secret",
+    "TraderX1" : "secret",
+    "TraderX1.5" : "secret",
+    "TraderY1" : "secret"
   }
 }
